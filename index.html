@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Best Massage Therapy & Spa LLC</title>
+
   <style>
     :root {
       --dark: #17130f;
@@ -16,9 +17,13 @@
       --shadow: 0 20px 50px rgba(35, 22, 13, .14);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -27,7 +32,10 @@
       background: var(--cream);
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .topbar {
       position: fixed;
@@ -38,14 +46,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 7%;
-      background: rgba(23, 19, 15, .72);
+      padding: 16px 7%;
+      background: rgba(23, 19, 15, .76);
       backdrop-filter: blur(12px);
       color: white;
     }
 
     .brand {
-      font-size: 18px;
+      font-size: 17px;
       letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--gold);
@@ -59,14 +67,21 @@
       font-size: 14px;
     }
 
-    .nav a { opacity: .9; }
+    .nav a {
+      opacity: .9;
+    }
 
-    .nav .nav-cta {
-      background: var(--gold);
-      color: var(--dark);
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
+    .book-now-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      text-transform: none;
     }
 
     .hero {
@@ -95,8 +110,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.58)),
-        radial-gradient(circle at center, rgba(216,169,79,.12), transparent 45%);
+        linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.60)),
+        radial-gradient(circle at center, rgba(216,169,79,.14), transparent 45%);
     }
 
     .hero-content {
@@ -135,7 +150,7 @@
       flex-wrap: wrap;
     }
 
-    .btn {
+    .call-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -145,12 +160,6 @@
       font-weight: 700;
       border: 1px solid rgba(255,255,255,.35);
       color: white;
-    }
-
-    .btn.primary {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--dark);
     }
 
     section {
@@ -233,8 +242,8 @@
       min-height: 420px;
       border-radius: 28px;
       background:
-        linear-gradient(rgba(34,22,13,.2), rgba(34,22,13,.35)),
-        url("https://i.pinimg.com/736x/cb/27/bb/cb27bb26f51fb38971f73e25ff0821bb.jpg") center/cover;
+        linear-gradient(rgba(34,22,13,.18), rgba(34,22,13,.35)),
+        url("https://i.pinimg.com/736x/90/e4/53/90e45360aab744a09a41836d2d85ca8b.jpg") center/cover;
       box-shadow: var(--shadow);
     }
 
@@ -287,7 +296,9 @@
       background: rgba(255,255,255,.55);
     }
 
-    .dot.active { background: var(--gold); }
+    .dot.active {
+      background: var(--gold);
+    }
 
     .service-body {
       padding: 24px;
@@ -341,9 +352,13 @@
       overflow: hidden;
     }
 
-    .reviews .section-head h2 { color: white; }
+    .reviews .section-head h2 {
+      color: white;
+    }
 
-    .reviews .section-head p { color: rgba(255,255,255,.68); }
+    .reviews .section-head p {
+      color: rgba(255,255,255,.68);
+    }
 
     .review-row {
       display: flex;
@@ -385,8 +400,12 @@
     }
 
     @keyframes scrollLeft {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .faq {
@@ -430,7 +449,9 @@
       line-height: 1.75;
     }
 
-    .faq-item.active .faq-a { display: block; }
+    .faq-item.active .faq-a {
+      display: block;
+    }
 
     .booking {
       background:
@@ -447,20 +468,32 @@
       align-items: stretch;
     }
 
-    .booking-info, .booking-form {
+    .booking-info,
+    .booking-box {
       background: white;
       border-radius: 28px;
       padding: 34px;
       box-shadow: var(--shadow);
     }
 
-    .booking-info h2 {
+    .booking-info h2,
+    .booking-box h3 {
       color: var(--brown);
-      font-size: 42px;
-      margin: 0 0 14px;
+      margin-top: 0;
     }
 
-    .booking-info p {
+    .booking-info h2 {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+
+    .booking-box h3 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .booking-info p,
+    .booking-box p {
       color: var(--muted);
       line-height: 1.8;
     }
@@ -475,34 +508,10 @@
       font-weight: 800;
     }
 
-    .form-grid {
+    .booking-box {
       display: grid;
-      gap: 14px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid #e8d8c2;
-      border-radius: 14px;
-      padding: 14px 15px;
-      font-family: inherit;
-      font-size: 15px;
-      background: #fffaf4;
-      color: var(--text);
-    }
-
-    textarea { min-height: 110px; resize: vertical; }
-
-    .submit {
-      border: 0;
-      border-radius: 999px;
-      padding: 15px 24px;
-      background: var(--brown);
-      color: white;
-      font-weight: 800;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 16px;
+      place-items: center;
+      text-align: center;
     }
 
     .contact {
@@ -558,24 +567,52 @@
     }
 
     @media (max-width: 980px) {
-      .nav { display: none; }
+      .nav a {
+        display: none;
+      }
+
       .about-card,
       .booking-wrap,
       .contact-grid {
         grid-template-columns: 1fr;
       }
+
       .service-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 640px) {
-      section { padding: 72px 5%; }
-      .topbar { padding: 15px 5%; }
-      .brand { font-size: 14px; }
-      .service-grid { grid-template-columns: 1fr; }
-      .about-copy, .booking-info, .booking-form, .contact-card { padding: 26px; }
-      .review { width: 300px; }
+      section {
+        padding: 72px 5%;
+      }
+
+      .topbar {
+        padding: 14px 5%;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-copy,
+      .booking-info,
+      .booking-box,
+      .contact-card {
+        padding: 26px;
+      }
+
+      .review {
+        width: 300px;
+      }
+
+      .topbar {
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -583,28 +620,48 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#home">The Best Massage Therapy & Spa LLC</a>
+
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQs</a>
       <a href="#contact">Contact</a>
-      <a class="nav-cta" href="#booking">Book Now</a>
+
+      <button
+        type="button"
+        style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+        class="anywhere-book-now-button"
+        data-booking-url="https://bestmassageke0b.setmore.com"
+        data-new-tab="false">
+        Book now
+      </button>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero-bg" id="heroBg"></div>
+
       <div class="hero-content">
         <div class="eyebrow">Relax • Restore • Renew</div>
         <h1>Your Quiet Escape in Hilton Head Island</h1>
         <p>
           Step into a calm, private, and professional spa environment designed to help your body unwind and your mind slow down.
         </p>
+
         <div class="btn-row">
-          <a class="btn primary" href="#booking">Book Now</a>
-          <a class="btn" href="tel:8435345888">Call 843-534-5888</a>
+          <button
+            type="button"
+            style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+            id="Anywhere_button_iframe"
+            class="anywhere-book-now-button"
+            data-booking-url="https://bestmassageke0b.setmore.com"
+            data-new-tab="false">
+            Book now
+          </button>
+
+          <a class="call-btn" href="tel:8435345888">Call 843-534-5888</a>
         </div>
       </div>
     </section>
@@ -622,12 +679,14 @@
             From the moment you arrive, the experience is simple: warm lighting, a soothing environment, and thoughtful care
             focused on relaxation and renewal.
           </p>
+
           <div class="about-points">
             <div class="point">Clean, comfortable treatment rooms</div>
             <div class="point">Quiet and private spa environment</div>
             <div class="point">Relaxation-focused experience from start to finish</div>
           </div>
         </div>
+
         <div class="about-visual" aria-label="Quiet spa treatment room"></div>
       </div>
     </section>
@@ -640,6 +699,7 @@
           Pricing below follows the in-store price list. Please call to confirm availability and the best option for your visit.
         </p>
       </div>
+
       <div class="service-grid" id="serviceGrid"></div>
     </section>
 
@@ -667,23 +727,31 @@
 
       <div class="faq-wrap">
         <div class="faq-item">
-          <button class="faq-q">How early should I arrive?<span>+</span></button>
-          <div class="faq-a">Please arrive 5–10 minutes early so you have time to check in, relax, and begin your session without feeling rushed.</div>
+          <button class="faq-q" type="button">How early should I arrive?<span>+</span></button>
+          <div class="faq-a">
+            Please arrive 5–10 minutes early so you have time to check in, relax, and begin your session without feeling rushed.
+          </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Can I get a massage if I have an injury?<span>+</span></button>
-          <div class="faq-a">Please let us know before your session. For recent, serious, or medically sensitive injuries, check with your healthcare provider first so your visit can be safe and comfortable.</div>
+          <button class="faq-q" type="button">Can I get a massage if I have an injury?<span>+</span></button>
+          <div class="faq-a">
+            Please let us know before your session. For recent, serious, or medically sensitive injuries, check with your healthcare provider first so your visit can be safe and comfortable.
+          </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">What is your cancellation policy?<span>+</span></button>
-          <div class="faq-a">Please call us as soon as possible if you need to cancel or reschedule. Advance notice helps us keep appointment times available for other guests.</div>
+          <button class="faq-q" type="button">What is your cancellation policy?<span>+</span></button>
+          <div class="faq-a">
+            Please call us as soon as possible if you need to cancel or reschedule. Advance notice helps us keep appointment times available for other guests.
+          </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Is there parking available?<span>+</span></button>
-          <div class="faq-a">Please call before your appointment if you need parking or entrance guidance. We will help direct you to the most convenient arrival option.</div>
+          <button class="faq-q" type="button">Is there parking available?<span>+</span></button>
+          <div class="faq-a">
+            Please call before your appointment if you need parking or entrance guidance. We will help direct you to the most convenient arrival option.
+          </div>
         </div>
       </div>
     </section>
@@ -691,33 +759,31 @@
     <section class="booking" id="booking">
       <div class="booking-wrap">
         <div class="booking-info">
-          <span class="eyebrow" style="color: var(--gold);">Book Your Time</span>
+          <span class="eyebrow" style="color: var(--gold);">Online Booking</span>
           <h2>Ready to relax?</h2>
           <p>
-            For the fastest booking, call the spa directly. You may also use this form to prepare your request before calling.
+            Schedule your massage appointment online through Setmore, or call us directly for assistance.
           </p>
           <a class="phone-big" href="tel:8435345888">Call 843-534-5888</a>
         </div>
 
-        <form class="booking-form" id="bookingForm">
-          <div class="form-grid">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="tel" name="phone" placeholder="Phone number" required />
-            <select name="service" required>
-              <option value="">Select a service</option>
-              <option>Body Massage</option>
-              <option>Scalp Spa</option>
-              <option>Foot Reflexology</option>
-              <option>Combo Package</option>
-              <option>Couple Massage</option>
-              <option>Four Hands</option>
-              <option>Add Ons</option>
-            </select>
-            <input type="text" name="time" placeholder="Preferred date & time" />
-            <textarea name="message" placeholder="Notes or special requests"></textarea>
-            <button class="submit" type="submit">Prepare Booking Request</button>
+        <div class="booking-box">
+          <div>
+            <h3>Book Your Appointment</h3>
+            <p>
+              Click below to choose your service and preferred appointment time.
+            </p>
+
+            <button
+              type="button"
+              style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+              class="anywhere-book-now-button"
+              data-booking-url="https://bestmassageke0b.setmore.com"
+              data-new-tab="false">
+              Book now
+            </button>
           </div>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -747,7 +813,14 @@
             9:00 AM – 8:30 PM
           </div>
 
-          <a class="phone-big" href="#booking">Book Now</a>
+          <button
+            type="button"
+            style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+            class="anywhere-book-now-button"
+            data-booking-url="https://bestmassageke0b.setmore.com"
+            data-new-tab="false">
+            Book now
+          </button>
         </div>
 
         <iframe
@@ -772,30 +845,33 @@
         "https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg",
         "https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg"
       ],
+
       scalp: [
-        "https://i.pinimg.com/736x/8c/81/c7/8c81c7054cb4c2a2e03bcb5cd8e8a119.jpg",
-        "https://i.pinimg.com/736x/72/49/a2/7249a2d1dd9abb23ee04b465eb3bfa12.jpg",
-        "https://i.pinimg.com/736x/dd/b7/b7/ddb7b7fa5a2dd110bd8eaf0221104894.jpg"
+        "https://i.pinimg.com/736x/6f/f7/53/6ff7537eb07c5e0b5c255b6266388028.jpg"
       ],
+
       foot: [
         "https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg",
         "https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg",
         "https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg",
         "https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg"
       ],
+
       couple: [
         "https://i.pinimg.com/736x/ac/a6/69/aca669d5a5fe654a32f0f6b3c5138275.jpg",
         "https://i.pinimg.com/736x/8d/88/02/8d88021e4d32ed8abd1452b7f48ce00b.jpg",
         "https://i.pinimg.com/736x/70/cb/60/70cb60cfa74373d9c0a2e39d478f489e.jpg",
         "https://i.pinimg.com/1200x/07/13/62/0713626b6e91eb53a1b7b60a3d0dfd8e.jpg"
       ],
+
       fourHands: [
         "https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg",
         "https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg",
         "https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg"
       ],
+
       neutral: [
-        "https://i.pinimg.com/736x/cb/27/bb/cb27bb26f51fb38971f73e25ff0821bb.jpg"
+        "https://i.pinimg.com/736x/90/e4/53/90e45360aab744a09a41836d2d85ca8b.jpg"
       ]
     };
 
@@ -803,7 +879,7 @@
       {
         name: "Body Massage",
         images: imageSets.body,
-        description: "A relaxing full-body session for everyday tension, stiff shoulders, back tightness, and travel fatigue. Available styles shown on the price board include Thai, Swedish, Deep Tissue, Walk-on-Back, and Sports Massage.",
+        description: "A relaxing full-body session for everyday tension, stiff shoulders, back tightness, and travel fatigue. Available bodywork styles shown on the price board include Thai, Swedish, Deep Tissue, Walk-on-Back, and Sports Massage.",
         prices: [
           ["30 mins", "$60"],
           ["60 mins", "$80"],
@@ -902,6 +978,7 @@
           <img src="${service.images[0]}" alt="${service.name}" loading="lazy">
           ${service.images.length > 1 ? `<div class="dots">${dots}</div>` : ""}
         </div>
+
         <div class="service-body">
           <h3>${service.name}</h3>
           <p>${service.description}</p>
@@ -917,9 +994,10 @@
       document.querySelectorAll(".service-image").forEach((wrap) => {
         const cardIndex = Number(wrap.dataset.card);
         const imgs = services[cardIndex].images;
+
         if (imgs.length <= 1) return;
 
-        let next = (Number(wrap.dataset.index) + 1) % imgs.length;
+        const next = (Number(wrap.dataset.index) + 1) % imgs.length;
         wrap.dataset.index = next;
 
         const img = wrap.querySelector("img");
@@ -956,7 +1034,7 @@
 
     const reviews = [
       ["The spa was clean, quiet, and exactly what I needed after a long week. I left feeling completely refreshed.", "M. Carter"],
-      ["Very relaxing atmosphere and easy to book by phone. The room felt private, calm, and comfortable.", "S. Williams"],
+      ["Very relaxing atmosphere and easy to book. The room felt private, calm, and comfortable.", "S. Williams"],
       ["The foot reflexology was excellent after walking around all day. My feet felt so much lighter afterward.", "J. Bennett"],
       ["I booked a couple massage and it was peaceful from start to finish. Great choice for a relaxing afternoon.", "A. Morgan"],
       ["The scalp spa was incredibly soothing. Perfect if you want to relax without a heavy full-body session.", "L. Parker"],
@@ -991,12 +1069,13 @@
       });
     });
 
-    document.getElementById("bookingForm").addEventListener("submit", (event) => {
-      event.preventDefault();
-      alert("Thank you. Please call 843-534-5888 to confirm your appointment time.");
-    });
-
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script
+    id="anywhere_book_now_script"
+    type="text/javascript"
+    src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js">
   </script>
 </body>
 </html>
